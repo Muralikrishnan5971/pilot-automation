@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="2" name="Test" parallel="methods">
+    <classes>
+      <class name="com.pa.tests.OrangeHrmTests"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test(failed)" parallel="methods">
+    <classes>
+      <class name="com.pa.tests.OrangeHrmTests">
+        <methods>
+          <include name="tearDown"/>
+          <include name="logInLogOutTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.pa.tests.OrangeHrmTests -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
